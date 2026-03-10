@@ -1,6 +1,6 @@
 {
-    "name": "laminas/laminas-auradi-config",
-    "description": "PSR-11 Aura.DI container configurator for Laminas and Mezzio applications",
+    "name": "maksimovic/laminas-auradi-config",
+    "description": "PSR-11 Aura.DI container configurator for Laminas and Mezzio applications. Drop-in replacement for the archived laminas/laminas-auradi-config with PHP 8.4 and 8.5 support.",
     "license": "BSD-3-Clause",
     "keywords": [
         "laminas",
@@ -9,15 +9,6 @@
         "container",
         "psr-11"
     ],
-    "homepage": "https://laminas.dev",
-    "abandoned": true,
-    "support": {
-        "issues": "https://github.com/laminas/laminas-auradi-config/issues",
-        "source": "https://github.com/laminas/laminas-auradi-config",
-        "rss": "https://github.com/laminas/laminas-auradi-config/releases.atom",
-        "chat": "https://laminas.dev/chat",
-        "forum": "https://discourse.laminas.dev"
-    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
@@ -27,9 +18,11 @@
             "php": "8.1.99"
         }
     },
-    "extra": {},
+    "replace": {
+        "laminas/laminas-auradi-config": "self.version"
+    },
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
         "aura/di": "^4.2"
     },
     "require-dev": {
